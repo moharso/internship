@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter";
+      }
+
+      body {
+        background-color: #d9d9d9;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #363636;
+      }
+
+      footer div {
+        padding: 0 20px;
+        color: #ffffff;
+        font-size: small;
+      }
+
+      img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .profile-page-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .form-container {
+        width: 80vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: small;
+      }
+
+      h2,
+      h1,
+      .bar-container,
+      .content-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .content-container {
+        flex-direction: column;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 20px;
+        gap: 20px;
+      }
+
+      .bar-container {
+        display: flex;
+        gap: 20px;
+        justify-content: start;
+        padding: 20px;
+        background-color: #363636;
+        border-radius: 20px;
+      }
+
+      .bar-container a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bolder;
+      }
+
+      h1 {
+        color: #ffffff;
+        font-style: italic;
+      }
+
+      .profile-form {
+        display: flex;
+        padding: 0 30px;
+      }
+
+      .profile-form-info {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0 0 20px;
+      }
+
+      .reset-buttons {
+        padding: 0 30px;
+        gap: 10px;
+        display: flex;
+      }
+
+      .reset-buttons button {
+        background-color: #363636;
+        border: none;
+        height: 25px;
+        width: 120px;
+        color: #ffffff;
+        border-radius: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-page-wrapper">
+      <div class="form-container">
+        <h1>Movie rental</h1>
+        <div class="bar-container">
+          <a href="./home.html">Home</a>
+          <a href="./yourMovies.html">Your movies</a>
+          <a href="./profile.html">Profile</a>
+        </div>
+        <div class="content-container">
+          <h2>Profile</h2>
+          <form class="profile-form">
+            <img src="./assets/profile-picture.png" />
+            <div class="profile-form-info">
+              <strong>Name:</strong>
+              <label>John</label>
+              <strong>Surname:</strong>
+              <label>Newman</label>
+              <strong>Email:</strong>
+              <label>john.newman@gmail.com</label>
+            </div>
+          </form>
+          <div class="reset-buttons">
+            <button>Reset password</button>
+            <button>Reset email</button>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div>Made by: Karolina Masharo</div>
+        <div>2023</div>
+      </footer>
+    </div>
+  </body>
+</html>
