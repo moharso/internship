@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter';
+      }
+
+      body {
+        background-color: #D9D9D9;
+      }
+
+      .home-page-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .form-wrapper {
+        width: 80vh;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: small;
+      }
+
+      .form-wrapper, .bar-container, .content-container {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      h2,
+      h1,
+      .bar-container,
+      .content-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .content-container {
+        flex-direction: column;
+        background-color: #FFFFFF;
+      }
+
+      .bar-container {
+        gap: 20px;
+        justify-content: start;
+      }
+
+      .bar-container a {
+        text-decoration: none;
+        font-weight: bolder;
+      }
+
+      h1 {
+        font-style: italic;
+      }
+
+      tbody tr td {
+        background-color: rgb(210, 210, 210);
+        padding: 5px 15px;
+      }
+
+      table {
+        border-spacing: 0 10px;
+      }
+
+      tbody tr td:first-child {
+        border-radius: 20px 0 0 20px;
+      }
+
+      .rent-wrapper, .rent-button, .bar-container {
+        background-color: #363636;
+      }
+
+      .rent-button {
+        border: none;
+        width: 50px;
+        height: 30px;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        background-color: #363636;
+      }
+
+      footer div {
+        padding: 0 20px 20px;
+        font-size: small;
+      }
+
+      footer div, .rent-button, h1, .bar-container a {
+        color: #FFFFFF;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home-page-wrapper">
+      <div class="form-wrapper">
+        <h1>Movie rental</h1>
+        <div class="bar-container">
+          <a href="./home.html">Home</a>
+          <a href="./yourMovies.html">Your movies</a>
+          <a href="./profile.html">Profile</a>
+        </div>
+        <div class="content-container">
+          <h2>Available Movies</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Price for 12h</th>
+                <th>Is in stock</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Batman</td>
+                <td>Action</td>
+                <td>4.55$</td>
+                <td><img src="./assets/check.png" alt="Check" /></td>
+                <td class="rent-wrapper">
+                  <input class="rent-button" type="button" value="Rent" />
+                </td>
+              </tr>
+              <tr>
+                <td>Spider-man</td>
+                <td>Action</td>
+                <td>5.00$</td>
+                <td><img src="./assets/check.png" alt="Check" /></td>
+                <td class="rent-wrapper">
+                  <input class="rent-button" type="button" value="Rent" />
+                </td>
+              </tr>
+              <tr>
+                <td>7 pounds</td>
+                <td>Drama</td>
+                <td>7.00$</td>
+                <td><img src="./assets/check.png" alt="Check" /></td>
+                <td class="rent-wrapper">
+                  <input class="rent-button" type="button" value="Rent" />
+                </td>
+              </tr>
+              <tr>
+                <td>Green book</td>
+                <td>Comedy</td>
+                <td>6.35$</td>
+                <td><img src="./assets/cross.png" alt="Check" /></td>
+                <td class="rent-wrapper">
+                  <input class="rent-button" type="button" value="Rent" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer>
+        <div>Made by: Karolina Masharo</div>
+        <div>2023</div>
+      </footer>
+    </div>
+  </body>
+</html>
