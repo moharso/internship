@@ -19,7 +19,7 @@
         background-color: #d9d9d9;
       }
 
-      footer {
+      .footer {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -30,13 +30,13 @@
         background-color: #363636;
       }
 
-      footer div {
+      .footer_info {
         padding: 0 20px;
         color: #ffffff;
         font-size: small;
       }
 
-      img {
+      .content_profile-form-img {
         width: 120px;
         height: 120px;
       }
@@ -47,7 +47,7 @@
         justify-content: center;
       }
 
-      .form-container {
+      .form-wrapper {
         width: 80vh;
         padding: 20px;
         display: flex;
@@ -56,15 +56,15 @@
         font-size: small;
       }
 
-      h2,
-      h1,
-      .bar-container,
-      .content-container {
+      .content__heading,
+      .title,
+      .nav-bar,
+      .content {
         display: flex;
         justify-content: center;
       }
 
-      .content-container {
+      .content {
         flex-direction: column;
         background-color: #ffffff;
         padding: 20px;
@@ -72,7 +72,7 @@
         gap: 20px;
       }
 
-      .bar-container {
+      .nav-bar {
         display: flex;
         gap: 20px;
         justify-content: start;
@@ -81,35 +81,35 @@
         border-radius: 20px;
       }
 
-      .bar-container a {
+      .nav-bar__link {
         color: #ffffff;
         text-decoration: none;
         font-weight: bolder;
       }
 
-      h1 {
+      .title {
         color: #ffffff;
         font-style: italic;
       }
 
-      .profile-form {
+      .content__profile-form {
         display: flex;
         padding: 0 30px;
       }
 
-      .profile-form-info {
+      .content__profile-form-info {
         display: flex;
         flex-direction: column;
         padding: 10px 0 0 20px;
       }
 
-      .reset-buttons {
+      .reset {
         padding: 0 30px;
         gap: 10px;
         display: flex;
       }
 
-      .reset-buttons button {
+      .reset__button {
         background-color: #363636;
         border: none;
         height: 25px;
@@ -121,35 +121,37 @@
   </head>
   <body>
     <div class="profile-page-wrapper">
-      <div class="form-container">
-        <h1>Movie rental</h1>
-        <div class="bar-container">
-          <a href="./home.html">Home</a>
-          <a href="./yourMovies.html">Your movies</a>
-          <a href="./profile.html">Profile</a>
-        </div>
-        <div class="content-container">
-          <h2>Profile</h2>
-          <form class="profile-form">
-            <img src="./assets/profile-picture.png" />
-            <div class="profile-form-info">
-              <strong>Name:</strong>
-              <label>John</label>
-              <strong>Surname:</strong>
-              <label>Newman</label>
-              <strong>Email:</strong>
-              <label>john.newman@gmail.com</label>
+      <div class="form-wrapper">
+        <h1 class="title">Movie rental</h1>
+        <nav class="nav-bar">
+          <a class="nav-bar__link" href="./home.html">Home</a>
+          <a class="nav-bar__link" href="./yourMovies.html">Your movies</a>
+          <a class="nav-bar__link" href="./profile.html">Profile</a>
+        </nav>
+        <div class="content">
+          <h2 class="content__heading">Profile</h2>
+          <form class="content__profile-form">
+            <img class="content_profile-form-img" src="./assets/profile-picture.png" />
+            <div class="content__profile-form-info">
+              <label><span style="font-weight: bold">Name:</span>John</label>
+              <label
+                ><span style="font-weight: bold">Surname:</span>Newman</label
+              >
+              <label
+                ><span style="font-weight: bold">Email:</span
+                >john.newman@gmail.com</label
+              >
             </div>
           </form>
-          <div class="reset-buttons">
-            <button>Reset password</button>
-            <button>Reset email</button>
+          <div class="reset">
+            <button class="reset__button">Reset password</button>
+            <button class="reset__button">Reset email</button>
           </div>
         </div>
       </div>
-      <footer>
-        <div>Made by: Karolina Masharo</div>
-        <div>2023</div>
+      <footer class="footer">
+        <div class="footer__info">Made by: Karolina Masharo</div>
+        <div class="footer__info">2023</div>
       </footer>
     </div>
   </body>

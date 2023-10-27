@@ -16,7 +16,7 @@
         background-color: #D9D9D9;
       }
 
-      footer {
+      .footer {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -27,15 +27,10 @@
         background-color: #363636;
       }
 
-      footer div {
+      .footer__info {
         padding: 0 20px;
         color: #FFFFFF;
         font-size: small;
-      }
-
-      img {
-        width: 20px;
-        height: 20px;
       }
 
       .your-movies-page-wrapper {
@@ -53,15 +48,15 @@
         font-size: small;
       }
 
-      h2,
-      h1,
-      .bar-container,
-      .content-container {
+      .content__heading,
+      .title,
+      .nav-bar,
+      .content {
         display: flex;
         justify-content: center;
       }
 
-      .content-container {
+      .content {
         flex-direction: column;
         background-color: #FFFFFF;
         padding: 20px;
@@ -69,7 +64,7 @@
         gap: 20px;
       }
 
-      .bar-container {
+      .nav-bar {
         display: flex;
         gap: 20px;
         justify-content: start;
@@ -78,18 +73,18 @@
         border-radius: 20px;
       }
 
-      .bar-container a {
+      .nav-bar__link {
         color: #FFFFFF;;
         text-decoration: none;
         font-weight: bolder;
       }
 
-      h1 {
+      .title {
         color: #FFFFFF;;
         font-style: italic;
       }
 
-      .remove-button {
+      .remove__button {
         background-color: #C93333;
         border: none;
         color: #FFFFFF;;
@@ -97,20 +92,20 @@
         height: 30px;
       }
 
-      tbody tr td {
+      .movies-list__item {
         background-color: rgb(210, 210, 210);
         padding: 5px 15px;
       }
 
-      table {
+      .movies-list {
         border-spacing: 0 10px;
       }
 
-      tbody tr td:first-child {
+      .movies-list__item:first-child {
         border-radius: 20px 0 0 20px;
       }
 
-      .remove-wrapper {
+      .remove {
         background-color: #C93333;
         display: flex;
         justify-content: center;
@@ -121,15 +116,15 @@
   <body>
     <div class="your-movies-page-wrapper">
       <div class="form-wrapper">
-        <h1>Movie rental</h1>
-        <div class="bar-container">
-          <a href="./home.html">Home</a>
-          <a href="./yourMovies.html">Your movies</a>
-          <a href="./profile.html">Profile</a>
-        </div>
-        <div class="content-container">
-          <h2>Your Movies</h2>
-          <table>
+        <h1 class="title">Movie rental</h1>
+        <nav class="nav-bar">
+          <a class="nav-bar__link" href="./home.html">Home</a>
+          <a class="nav-bar__link" href="./yourMovies.html">Your movies</a>
+          <a class="nav-bar__link" href="./profile.html">Profile</a>
+        </nav>
+        <div class="content">
+          <h2 class="content__heading">Your Movies</h2>
+          <table class="movies-list">
             <thead>
               <tr>
                 <th>Name</th>
@@ -141,30 +136,30 @@
             </thead>
             <tbody>
               <tr>
-                <td>7 pounds</td>
-                <td>Drama</td>
-                <td>12h</td>
-                <td>7.00$</td>
-                <td class="remove-wrapper">
-                    <input class="remove-button" type="button" value="Remove" />
+                <td class="movies-list__item">7 pounds</td>
+                <td class="movies-list__item">Drama</td>
+                <td class="movies-list__item">12h</td>
+                <td class="movies-list__item">7.00$</td>
+                <td class="remove movies-list__item">
+                    <input class="remove__button" type="button" value="Remove" />
                 </td>
               </tr>
               <tr>
-                <td>Green book</td>
-                <td>Comedy</td>
-                <td>12h</td>
-                <td>6.35$</td>
-                <td class="remove-wrapper">
-                  <input class="remove-button" type="button" value="Remove" />
+                <td class="movies-list__item">Green book</td>
+                <td class="movies-list__item">Comedy</td>
+                <td class="movies-list__item">12h</td>
+                <td class="movies-list__item">6.35$</td>
+                <td class="remove movies-list__item">
+                  <input class="remove__button" type="button" value="Remove" />
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <footer>
-        <div>Made by: Karolina Masharo</div>
-        <div>2023</div>
+      <footer class="footer">
+        <div class="footer__info">Made by: Karolina Masharo</div>
+        <div class="footer__info">2023</div>
       </footer>
     </div>
   </body>
