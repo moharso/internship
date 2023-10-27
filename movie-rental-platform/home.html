@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
         padding: 0;
-        font-family: 'Inter';
+        font-family: "Inter";
       }
 
       body {
-        background-color: #D9D9D9;
+        background-color: #d9d9d9;
       }
 
       .home-page-wrapper {
@@ -21,7 +24,7 @@
         justify-content: center;
       }
 
-      img {
+      .movies-list__item-img {
         width: 20px;
         height: 20px;
       }
@@ -34,62 +37,66 @@
         font-size: small;
       }
 
-      .form-wrapper, .bar-container, .content-container {
+      .form-wrapper,
+      .nav-bar,
+      .content {
         padding: 20px;
         border-radius: 20px;
       }
 
-      h2,
-      h1,
-      .bar-container,
-      .content-container {
+      .content__heading,
+      .title,
+      .nav-bar,
+      .content {
         display: flex;
         justify-content: center;
       }
 
-      .content-container {
+      .content {
         flex-direction: column;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
       }
 
-      .bar-container {
+      .nav-bar {
         gap: 20px;
         justify-content: start;
       }
 
-      .bar-container a {
+      .nav-bar__link {
         text-decoration: none;
         font-weight: bolder;
       }
 
-      h1 {
+      .title {
         font-style: italic;
       }
 
-      tbody tr td {
+      .movies-list__item {
         background-color: rgb(210, 210, 210);
         padding: 5px 15px;
       }
 
-      table {
+      .movies-list {
         border-spacing: 0 10px;
       }
 
-      tbody tr td:first-child {
+      .movies-list__item:first-child {
         border-radius: 20px 0 0 20px;
       }
 
-      .rent-wrapper, .rent-button, .bar-container {
+      .rent,
+      .rent__button,
+      .nav-bar {
         background-color: #363636;
       }
 
-      .rent-button {
+      .rent__button {
         border: none;
         width: 50px;
         height: 30px;
       }
 
-      footer {
+      .footer {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -100,28 +107,31 @@
         background-color: #363636;
       }
 
-      footer div {
+      .footer__info {
         padding: 0 20px 20px;
         font-size: small;
       }
 
-      footer div, .rent-button, h1, .bar-container a {
-        color: #FFFFFF;
+      .footer__info,
+      .rent__button,
+      .title,
+      .nav-bar__link {
+        color: #ffffff;
       }
     </style>
   </head>
   <body>
     <div class="home-page-wrapper">
       <div class="form-wrapper">
-        <h1>Movie rental</h1>
-        <div class="bar-container">
-          <a href="./home.html">Home</a>
-          <a href="./yourMovies.html">Your movies</a>
-          <a href="./profile.html">Profile</a>
-        </div>
-        <div class="content-container">
-          <h2>Available Movies</h2>
-          <table>
+        <h1 class="title">Movie rental</h1>
+        <nav class="nav-bar">
+          <a class="nav-bar__link" href="./home.html">Home</a>
+          <a class="nav-bar__link" href="./yourMovies.html">Your movies</a>
+          <a class="nav-bar__link" href="./profile.html">Profile</a>
+        </nav>
+        <div class="content">
+          <h2 class="content__heading">Available Movies</h2>
+          <table class="movies-list">
             <thead>
               <tr>
                 <th>Name</th>
@@ -133,48 +143,72 @@
             </thead>
             <tbody>
               <tr>
-                <td>Batman</td>
-                <td>Action</td>
-                <td>4.55$</td>
-                <td><img src="./assets/check.png" alt="Check" /></td>
-                <td class="rent-wrapper">
-                  <input class="rent-button" type="button" value="Rent" />
+                <td class="movies-list__item">Batman</td>
+                <td class="movies-list__item">Action</td>
+                <td class="movies-list__item">4.55$</td>
+                <td class="movies-list__item">
+                  <img
+                    class="movies-list__item-img"
+                    src="./assets/check.png"
+                    alt="Check"
+                  />
+                </td>
+                <td class="rent movies-list__item">
+                  <input class="rent__button" type="button" value="Rent" />
                 </td>
               </tr>
               <tr>
-                <td>Spider-man</td>
-                <td>Action</td>
-                <td>5.00$</td>
-                <td><img src="./assets/check.png" alt="Check" /></td>
-                <td class="rent-wrapper">
-                  <input class="rent-button" type="button" value="Rent" />
+                <td class="movies-list__item">Spider-man</td>
+                <td class="movies-list__item">Action</td>
+                <td class="movies-list__item">5.00$</td>
+                <td class="movies-list__item">
+                  <img
+                    class="movies-list__item-img"
+                    src="./assets/check.png"
+                    alt="Check"
+                  />
+                </td>
+                <td class="rent movies-list__item">
+                  <input class="rent__button" type="button" value="Rent" />
                 </td>
               </tr>
               <tr>
-                <td>7 pounds</td>
-                <td>Drama</td>
-                <td>7.00$</td>
-                <td><img src="./assets/check.png" alt="Check" /></td>
-                <td class="rent-wrapper">
-                  <input class="rent-button" type="button" value="Rent" />
+                <td class="movies-list__item">7 pounds</td>
+                <td class="movies-list__item">Drama</td>
+                <td class="movies-list__item">7.00$</td>
+                <td class="movies-list__item">
+                  <img
+                    class="movies-list__item-img"
+                    src="./assets/check.png"
+                    alt="Check"
+                  />
+                </td>
+                <td class="rent movies-list__item">
+                  <input class="rent__button" type="button" value="Rent" />
                 </td>
               </tr>
               <tr>
-                <td>Green book</td>
-                <td>Comedy</td>
-                <td>6.35$</td>
-                <td><img src="./assets/cross.png" alt="Check" /></td>
-                <td class="rent-wrapper">
-                  <input class="rent-button" type="button" value="Rent" />
+                <td class="movies-list__item">Green book</td>
+                <td class="movies-list__item">Comedy</td>
+                <td class="movies-list__item">6.35$</td>
+                <td class="movies-list__item">
+                  <img
+                    class="movies-list__item-img"
+                    src="./assets/cross.png"
+                    alt="Check"
+                  />
+                </td>
+                <td class="rent movies-list__item">
+                  <input class="rent__button" type="button" value="Rent" />
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <footer>
-        <div>Made by: Karolina Masharo</div>
-        <div>2023</div>
+      <footer class="footer">
+        <div class="footer__info">Made by: Karolina Masharo</div>
+        <div class="footer__info">2023</div>
       </footer>
     </div>
   </body>
