@@ -27,12 +27,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #363636;
       }
 
       .footer_info {
         padding: 0 20px;
-        color: #ffffff;
         font-size: small;
       }
 
@@ -47,7 +45,7 @@
         justify-content: center;
       }
 
-      .form-wrapper {
+      .content-wrapper {
         width: 80vh;
         padding: 20px;
         display: flex;
@@ -58,7 +56,6 @@
 
       .content__heading,
       .title,
-      .nav-bar,
       .content {
         display: flex;
         justify-content: center;
@@ -77,18 +74,15 @@
         gap: 20px;
         justify-content: start;
         padding: 20px;
-        background-color: #363636;
         border-radius: 20px;
       }
 
       .nav-bar__link {
-        color: #ffffff;
         text-decoration: none;
         font-weight: bolder;
       }
 
       .title {
-        color: #ffffff;
         font-style: italic;
       }
 
@@ -110,48 +104,52 @@
       }
 
       .reset__button {
-        background-color: #363636;
         border: none;
         height: 25px;
         width: 120px;
-        color: #ffffff;
         border-radius: 70px;
+      }
+
+      .dark-color {
+        background-color: #363636;
+      }
+
+      .light-text-color {
+        color: #ffffff;
       }
     </style>
   </head>
   <body>
     <div class="profile-page-wrapper">
-      <div class="form-wrapper">
-        <h1 class="title">Movie rental</h1>
-        <nav class="nav-bar">
-          <a class="nav-bar__link" href="./home.html">Home</a>
-          <a class="nav-bar__link" href="./yourMovies.html">Your movies</a>
-          <a class="nav-bar__link" href="./profile.html">Profile</a>
+      <div class="content-wrapper">
+        <h1 class="title light-text-color">Movie rental</h1>
+        <nav class="nav-bar dark-color">
+          <a class="nav-bar__link light-text-color" href="./home.html">Home</a>
+          <a class="nav-bar__link light-text-color" href="./yourMovies.html">Your movies</a>
+          <a class="nav-bar__link light-text-color" href="./profile.html">Profile</a>
         </nav>
         <div class="content">
           <h2 class="content__heading">Profile</h2>
           <form class="content__profile-form">
-            <img class="content_profile-form-img" src="./assets/profile-picture.png" />
+            <img
+              class="content_profile-form-img"
+              src="./assets/profile-picture.png"
+            />
             <div class="content__profile-form-info">
-              <label><span style="font-weight: bold">Name:</span>John</label>
-              <label
-                ><span style="font-weight: bold">Surname:</span>Newman</label
-              >
-              <label
-                ><span style="font-weight: bold">Email:</span
-                >john.newman@gmail.com</label
-              >
+              <label><strong>Name:</strong>John</label>
+              <label><strong>Surname:</strong>Newman</label>
+              <label><strong>Email:</strong>john.newman@gmail.com</label>
             </div>
           </form>
           <div class="reset">
-            <button class="reset__button">Reset password</button>
-            <button class="reset__button">Reset email</button>
+            <button class="reset__button dark-color light-text-color">Reset password</button>
+            <button class="reset__button dark-color light-text-color">Reset email</button>
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="footer__info">Made by: Karolina Masharo</div>
-        <div class="footer__info">2023</div>
+      <footer class="footer dark-color">
+        <div class="footer__info light-text-color">Made by: Karolina Masharo</div>
+        <div class="footer__info light-text-color">2023</div>
       </footer>
     </div>
   </body>

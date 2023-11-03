@@ -17,7 +17,6 @@
       }
 
       .title {
-        color: #FFFFFF;
         font-style: italic;
         padding: 20px;
       }
@@ -44,16 +43,14 @@
         display: flex;
         justify-content: space-between;
         align-items: end;
-        background-color: #363636;
       }
 
       .footer__info {
         padding: 0 20px 20px;
-        color: #FFFFFF;
         font-size: smaller;
       }
 
-      .form-wrapper div {
+      .sign-in-form__input {
         flex-direction: column;
         display: flex;
         padding: 10px;
@@ -69,11 +66,9 @@
       }
 
       .register-form__button, .sign-in-form__button {
-        background-color: #363636;
         border: none;
         height: 30px;
         width: 120px;
-        color: #FFFFFF;
         border-radius: 70px;
       }
 
@@ -82,54 +77,62 @@
         background-color: rgb(236, 236, 236);
         padding: 7px;
       }
+
+      .dark-color {
+        background-color: #363636;
+      }
+
+      .light-text-color {
+        color: #ffffff;
+      }
     </style>
   </head>
   <body>
-    <div class="login-page-wrapper">
-      <h1 class="title">Movie rental</h1>
+    <div>
+      <h1 class="title light-text-color">Movie rental</h1>
       <div class="form-wrapper">
         <form class="sign-in-form">
-          <div class="sign-in-form__email">
+          <div class="sign-in-form__input">
             <label>Email</label>
             <input class="form-input" placeholder="Email" type="email" />
           </div>
-          <div class="sign-in-form_password">
+          <div class="sign-in-form__input">
             <label>Password</label>
             <input class="form-input" placeholder="Password" type="password" />
           </div>
-          <button class="sign-in-form__button">Sign in</button>
+          <button class="sign-in-form__button dark-color light-text-color">Sign in</button>
         </form>
         <form class="register-form">
-          <div>
+          <div class="sign-in-form__input">
             <label>Name</label>
             <input class="form-input" placeholder="Name" type="string" />
           </div>
-          <div>
+          <div class="sign-in-form__input">
             <label>Surname</label>
             <input class="form-input" placeholder="Surname" type="string" />
           </div>
-          <div>
+          <div class="sign-in-form__input">
             <label>Email</label>
             <input class="form-input" placeholder="Email" type="email" />
           </div>
-          <div>
+          <div class="sign-in-form__input">
             <label>Email again</label>
             <input class="form-input" placeholder="Email again" type="email" />
           </div>
-          <div>
+          <div class="sign-in-form__input">
             <label>Password</label>
             <input class="form-input" placeholder="Password" type="password" />
           </div>
-          <div>
+          <div class="sign-in-form__input">
             <label>Password again</label>
             <input class="form-input" placeholder="Password again" type="password" />
           </div>
-          <button class="register-form__button">Register</button>
+          <button class="register-form__button dark-color light-text-color">Register</button>
         </form>
       </div>
-      <footer class="footer">
-        <div class="footer__info">Made by: Karolina Masharo</div>
-        <div class="footer__info">2023</div>
+      <footer class="footer dark-color">
+        <div class="footer__info light-text-color">Made by: Karolina Masharo</div>
+        <div class="footer__info light-text-color">2023</div>
       </footer>
     </div>
   </body>
