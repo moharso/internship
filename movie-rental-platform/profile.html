@@ -8,116 +8,7 @@
       href="https://fonts.googleapis.com/css?family=Inter"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        font-family: "Inter";
-      }
-
-      body {
-        background-color: #d9d9d9;
-      }
-
-      .footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 80px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .footer_info {
-        padding: 0 20px;
-        font-size: small;
-      }
-
-      .content_profile-form-img {
-        width: 120px;
-        height: 120px;
-      }
-
-      .profile-page-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-
-      .content-wrapper {
-        width: 80vh;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        font-size: small;
-      }
-
-      .content__heading,
-      .title,
-      .content {
-        display: flex;
-        justify-content: center;
-      }
-
-      .content {
-        flex-direction: column;
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 20px;
-        gap: 20px;
-      }
-
-      .nav-bar {
-        display: flex;
-        gap: 20px;
-        justify-content: start;
-        padding: 20px;
-        border-radius: 20px;
-      }
-
-      .nav-bar__link {
-        text-decoration: none;
-        font-weight: bolder;
-      }
-
-      .title {
-        font-style: italic;
-      }
-
-      .content__profile-form {
-        display: flex;
-        padding: 0 30px;
-      }
-
-      .content__profile-form-info {
-        display: flex;
-        flex-direction: column;
-        padding: 10px 0 0 20px;
-      }
-
-      .reset {
-        padding: 0 30px;
-        gap: 10px;
-        display: flex;
-      }
-
-      .reset__button {
-        border: none;
-        height: 25px;
-        width: 120px;
-        border-radius: 70px;
-      }
-
-      .dark-color {
-        background-color: #363636;
-      }
-
-      .light-text-color {
-        color: #ffffff;
-      }
-    </style>
+    <link href="./profile.css" rel="stylesheet">
   </head>
   <body>
     <div class="profile-page-wrapper">
@@ -136,14 +27,14 @@
               src="./assets/profile-picture.png"
             />
             <div class="content__profile-form-info">
-              <label><strong>Name:</strong>John</label>
-              <label><strong>Surname:</strong>Newman</label>
-              <label><strong>Email:</strong>john.newman@gmail.com</label>
+              <label class="profile__first-name"></label>
+              <label class="profile__surname"></label>
+              <label class="profile__email"></label>
             </div>
           </form>
           <div class="reset">
             <button class="reset__button dark-color light-text-color">Reset password</button>
-            <button class="reset__button dark-color light-text-color">Reset email</button>
+            <button class="reset__button dark-color light-text-color" onclick="resetEmail()">Reset email</button>
           </div>
         </div>
       </div>
@@ -153,4 +44,5 @@
       </footer>
     </div>
   </body>
+  <script src="./profile.js"></script>
 </html>

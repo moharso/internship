@@ -48,10 +48,9 @@ registerToggleButton.addEventListener("click", toggleRegisterForm)
 function register() {
     if (emailInputRegister.value.length < 3 || passwordInputRegister.value.length < 8 
         || !isEmailValid(emailInputRegister.value) || emailInputRegister.value !== emailAgainInputRegister.value 
-        || nameInputRegister.value.length < 2 || surnameInputRegister.value.length < 2) 
-        // || passwordInputRegister.value !== passwordAgainInputRegister.value) 
+        || nameInputRegister.value.length < 2 || surnameInputRegister.value.length < 2 || passwordInputRegister.value !== passwordAgainInputRegister.value) 
         {
-        alert("Something went wrong")
+            alert("Wrong input")
     } else {
         window.location.href = "./home.html"
     }
