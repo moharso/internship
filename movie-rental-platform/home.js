@@ -3,6 +3,7 @@ const movieGenre = document.querySelector(".movies-genre")
 const moviePrice = document.querySelector(".movies-list__price")
 const rentButton = document.querySelector(".rent__button")
 let tableBody = document.querySelector(".table-body")
+const logOutButton = document.querySelector(".log-out__button")
 
 const movieList = [{
     "name": "Batman",
@@ -70,7 +71,7 @@ addMovie()
 
 generatedMovieList()
 
-const yourMovies = []
+const yourMovies = JSON.parse(localStorage.getItem("currentUser"))[0].yourMovies || [];
 
 function addMovie() {
     const rentButton = document.querySelectorAll(".rent__button")
@@ -80,8 +81,8 @@ function addMovie() {
         if (movieList[i].isInStock > 0) {
             yourMovies.push(movieList[i])
             movieList[i].isInStock--;
-            console.log(yourMovies)
             generatedMovieList()
+            updateLocalStorage();
         } else {
             alert("Movie is out of stock")
         }
@@ -89,3 +90,17 @@ function addMovie() {
 })
 
 }
+
+function updateLocalStorage() {
+    let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    currentUser[0].yourMovies = yourMovies;
+
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+}
+
+logOutButton.addEventListener("click", function() {
+    localStorage.removeItem("currentUser");
+    window.location.href = "./login.html"
+})

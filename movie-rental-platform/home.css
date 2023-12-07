@@ -50,7 +50,7 @@
     border-radius: 20px;
   }
 
-  .nav-bar__link {
+  .nav-bar__link, .log-out__button {
     text-decoration: none;
     font-weight: bolder;
   }
@@ -101,4 +101,16 @@
 
   .light-text-color {
     color: #ffffff;
+  }
+
+  .log-out__button {
+    border: none;
+    border-radius: 10%;
+    background: transparent;
+    color: white;
+  }
+
+  .log-out {
+    display: flex;
+    justify-content: end;
   }

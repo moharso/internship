@@ -26,7 +26,26 @@ function isEmailValid(email) {
 };
 
 function logIn() {
-    if (emailInputSignIn.value.length < 3 || passwordInputSignIn.value.length < 8 || !isEmailValid(emailInputSignIn.value)) {
+    let emailCompare = JSON.parse(localStorage.getItem("users"))
+    let emailInputValue = emailInputSignIn.value;
+    let passwordInputValue = passwordInputSignIn.value;
+
+    let isCredentialsValid = false;
+
+    for (let i = 0; i < emailCompare.length; i++) {
+        let userEmail = emailCompare[i].email;
+        let userPassword = emailCompare[i].password;
+        let currentUser = []
+
+        if (emailInputValue === userEmail && passwordInputValue === userPassword) {
+            isCredentialsValid = true;
+            currentUser.push(emailCompare[i])
+            localStorage.setItem("currentUser", JSON.stringify(currentUser))
+            break;
+        }
+    }
+
+    if (!isCredentialsValid) {
         emailInputSignIn.classList.add("validation-error")
         passwordInputSignIn.classList.add("validation-error")
     } else {
@@ -34,6 +53,7 @@ function logIn() {
         emailInputSignIn.classList.remove("validation-error")
         passwordInputSignIn.classList.remove("validation-error")
         emailInputSignIn.value = ""
+
     }
 }
 
@@ -45,14 +65,35 @@ function toggleRegisterForm() {
 
 registerToggleButton.addEventListener("click", toggleRegisterForm)
 
+function saveUser() {
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let name = nameInputRegister.value
+    let surname = surnameInputRegister.value
+    let email = emailAgainInputRegister.value
+    let password = passwordInputRegister.value
+
+    let newUser = {
+        name: name,
+        surname: surname,
+        email: email,
+        password: password,
+        id: Math.random()
+    }
+
+    users.push(newUser)
+
+    localStorage.setItem("users", JSON.stringify(users))
+}
+
 function register() {
-    if (emailInputRegister.value.length < 3 || passwordInputRegister.value.length < 8 
-        || !isEmailValid(emailInputRegister.value) || emailInputRegister.value !== emailAgainInputRegister.value 
-        || nameInputRegister.value.length < 2 || surnameInputRegister.value.length < 2 || passwordInputRegister.value !== passwordAgainInputRegister.value) 
-        {
-            alert("Wrong input")
+    if (emailInputRegister.value.length < 3 || passwordInputRegister.value.length < 8
+        || !isEmailValid(emailInputRegister.value) || emailInputRegister.value !== emailAgainInputRegister.value
+        || nameInputRegister.value.length < 2 || surnameInputRegister.value.length < 2 || passwordInputRegister.value !== passwordAgainInputRegister.value) {
+        alert("Wrong input")
     } else {
         window.location.href = "./home.html"
+        saveUser()
     }
 }
 
